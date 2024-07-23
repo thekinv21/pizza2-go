@@ -1,0 +1,31 @@
+.header {
+	@apply border border-b px-4 xl:px-0;
+
+	.content {
+		@apply flex flex-col md:flex-row justify-center items-center md:justify-between py-4 gap-10 md:gap-0 sm:py-6 lg:py-8;
+
+		.logo_container {
+			@apply flex items-center gap-4 select-none;
+
+			> div {
+				@apply flex flex-col items-center gap-1;
+
+				> h1 {
+					@apply uppercase font-black text-xl lg:text-2xl;
+				}
+
+				> p {
+					@apply text-xs sm:text-sm text-gray-400 leading-3;
+				}
+			}
+		}
+
+		.input_container {
+			@apply w-full md:w-1/3 lg:w-1/2;
+
+			.input {
+				@apply w-full rounded-sm border border-gray-200/50 bg-gray-50/45 px-4 py-2 outline-none transition-all duration-300 ease-out focus:border-primary/80;
+			}
+		}
+	}
+}

@@ -1,5 +1,6 @@
 import { Nunito } from 'next/font/google'
 
+import { Header } from '@/components/shared'
 import { Metadata } from 'next'
 import './globals.scss'
 
@@ -26,6 +27,7 @@ export default function RootLayout({ children }: Readonly<IRootLayoutProps>) {
 				<link data-rh='true' rel='icon' href='/logo.png' />
 			</head>
 			<body className={nunito.className}>
+				<Header />
 				<main className='min-h-screen'>{children}</main>
 			</body>
 		</html>
