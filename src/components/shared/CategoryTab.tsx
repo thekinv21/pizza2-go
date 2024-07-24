@@ -3,7 +3,7 @@
 import { cn } from '@/lib/utils'
 import { useState } from 'react'
 
-interface ICategories {
+interface ICategoryTab {
 	className?: string
 }
 
@@ -13,7 +13,7 @@ type TypeCategory = {
 	order: number
 }
 
-export function Categories({ className, ...props }: ICategories) {
+export function CategoryTab({ className, ...props }: ICategoryTab) {
 	const categories: TypeCategory[] = [
 		{ id: 1, categoryName: 'Tümü', order: 1 },
 		{ id: 2, categoryName: 'Pizza', order: 2 },
@@ -30,7 +30,7 @@ export function Categories({ className, ...props }: ICategories) {
 	return (
 		<section
 			className={cn(
-				'md:inline-flex bg-gray-50  gap-1 p-2 w-full md:w-auto overflow-y-scroll mt-3 rounded-2xl',
+				'md:inline-flex bg-gray-50 flex flex-row flex-wrap text-center gap-1 p-2 md:w-auto overflow-y-scroll mt-3 rounded-2xl',
 				className
 			)}
 		>
@@ -40,7 +40,7 @@ export function Categories({ className, ...props }: ICategories) {
 					<div
 						key={category.id}
 						className={cn(
-							'flex items-center font-bold h-10 rounded-2xl px-8 transition duration-300 ',
+							'flex items-center font-bold h-8 rounded-2xl px-8 transition duration-300 ',
 							active === category.id ? 'text-white bg-primary/80' : 'text-black'
 						)}
 					>
@@ -48,7 +48,7 @@ export function Categories({ className, ...props }: ICategories) {
 							onClick={() => setActive(category.id)}
 							className='focus:outline-none text-center w-full md:text-left'
 						>
-							{category.categoryName}
+							<span>{category.categoryName}</span>
 						</button>
 					</div>
 				))}

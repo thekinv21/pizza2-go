@@ -3,7 +3,7 @@ import { HeaderAction } from './HeaderAction'
 import { HeaderField } from './HeaderField'
 import { HeaderLogo } from './HeaderLogo'
 
-import { CustomContainer } from '../CustomContainer'
+import { Container } from '../Container'
 import styles from './Header.module.scss'
 
 interface IHeader {
@@ -13,11 +13,11 @@ interface IHeader {
 export function Header({ className }: IHeader) {
 	return (
 		<header className={cn(styles.header, className)}>
-			<CustomContainer className={styles.content}>
+			<Container className={styles.content}>
 				<HeaderLogo />
 				<HeaderField />
 				<HeaderAction />
-			</CustomContainer>
+			</Container>
 		</header>
 	)
 }

@@ -1,14 +1,14 @@
 import { cn } from '@/lib/utils'
 import type { PropsWithChildren } from 'react'
 
-interface ICustomContainer {
+interface IContainer {
 	className?: string
 }
 
-export function CustomContainer({
+export function Container({
 	children,
 	className,
-}: PropsWithChildren<ICustomContainer>) {
+}: PropsWithChildren<IContainer>) {
 	return (
 		<section
 			className={cn(
