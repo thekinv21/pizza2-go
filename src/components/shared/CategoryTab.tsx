@@ -45,6 +45,7 @@ export function CategoryTab({ className, ...props }: ICategoryTab) {
 						)}
 					>
 						<button
+							aria-label={category.categoryName}
 							onClick={() => setActive(category.id)}
 							className='focus:outline-none text-center w-full md:text-left'
 						>

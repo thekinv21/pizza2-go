@@ -13,6 +13,7 @@ export function FilterCheckbox(props: IFilterCheckbox) {
 	return (
 		<div className='flex items-center space-x-2'>
 			<Checkbox
+				aria-label={`checkbox-${String(props.name)}`}
 				onCheckedChange={props.onCheckedChange}
 				checked={props.checked}
 				value={props.value}

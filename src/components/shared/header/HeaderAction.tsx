@@ -5,7 +5,7 @@ export function HeaderAction() {
 	return (
 		<div className='custom-flex-center gap-3'>
 			<Button variant='outline' className='custom-flex-center gap-1'>
-				<User size={16} />
+				<User size={16} aria-hidden='true' />
 				Login
 			</Button>
 
@@ -14,7 +14,11 @@ export function HeaderAction() {
 					<b>200 &#8378;</b>
 					<span className='h-full w-[1px] bg-primary/70 mx-3' />
 					<div className='flex items-center gap-1 transition duration-300 group-hover:opacity-0'>
-						<ShoppingCart className='h-4 w-4 relative' strokeWidth={2} />
+						<ShoppingCart
+							aria-hidden='true'
+							className='h-4 w-4 relative'
+							strokeWidth={2}
+						/>
 						<b className='mt-0.5'>3</b>
 					</div>
 

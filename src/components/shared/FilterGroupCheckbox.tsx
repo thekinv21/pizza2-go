@@ -67,6 +67,7 @@ export function CheckboxFilterGroup({
 				{props.items.length > limit && (
 					<div className={showAll ? 'border-t border-t-neutral-100 mt-4' : ''}>
 						<Button
+							aria-label='show-all-hidden'
 							onClick={() => setShowAll(!showAll)}
 							variant='link'
 							className='text-primary mt-3'
